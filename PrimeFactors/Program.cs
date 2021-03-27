@@ -22,11 +22,11 @@ namespace PrimeFactors
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Prime factors of 4 are: "+ PrimeFactors(4));
-            Console.WriteLine("Prime factors of 7 are: " + PrimeFactors(7));
-            Console.WriteLine("Prime factors of 30 are: " + PrimeFactors(30));
-            Console.WriteLine("Prime factors of 40 are: " + PrimeFactors(40));
-            Console.WriteLine("Prime factors of 50 are: " + PrimeFactors(50));
+            Console.WriteLine("Prime factors of 4 are: " + PrimeFactors(4) + "\n");
+            Console.WriteLine("Prime factors of 7 are: " + PrimeFactors(7) + "\n");
+            Console.WriteLine("Prime factors of 30 are: " + PrimeFactors(30) + "\n");
+            Console.WriteLine("Prime factors of 40 are: " + PrimeFactors(40) + "\n");
+            Console.WriteLine("Prime factors of 50 are: " + PrimeFactors(50) + "\n");
             
         }
     }
