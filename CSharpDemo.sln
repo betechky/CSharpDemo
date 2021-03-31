@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimeFactors", "PrimeFactor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimeFactorsTest", "PrimeFactorsTest\PrimeFactorsTest.csproj", "{03803075-6233-4490-9FFF-D0238ACBE79A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exemption_Handling", "Exemption_Handling\Exemption_Handling.csproj", "{0B1016B3-AFD5-40EE-8E4F-4C9CDB950B6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exemption_Handling", "Exemption_Handling\Exemption_Handling.csproj", "{0B1016B3-AFD5-40EE-8E4F-4C9CDB950B6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooAnimals", "ZooAnimals\ZooAnimals.csproj", "{10316C13-CE97-41AC-B33A-99F83D4D29A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAnimalClassLibrary", "iAnimalClassLibrary\IAnimalClassLibrary.csproj", "{CCB764B4-5FB0-4C2A-98D5-D659211BAD27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore", "DotNetCore\DotNetCore.csproj", "{B96CA5CF-0758-4771-87B1-7DE2724C626D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{0B1016B3-AFD5-40EE-8E4F-4C9CDB950B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B1016B3-AFD5-40EE-8E4F-4C9CDB950B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B1016B3-AFD5-40EE-8E4F-4C9CDB950B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10316C13-CE97-41AC-B33A-99F83D4D29A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10316C13-CE97-41AC-B33A-99F83D4D29A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10316C13-CE97-41AC-B33A-99F83D4D29A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10316C13-CE97-41AC-B33A-99F83D4D29A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCB764B4-5FB0-4C2A-98D5-D659211BAD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB764B4-5FB0-4C2A-98D5-D659211BAD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB764B4-5FB0-4C2A-98D5-D659211BAD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB764B4-5FB0-4C2A-98D5-D659211BAD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B96CA5CF-0758-4771-87B1-7DE2724C626D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96CA5CF-0758-4771-87B1-7DE2724C626D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96CA5CF-0758-4771-87B1-7DE2724C626D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96CA5CF-0758-4771-87B1-7DE2724C626D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
