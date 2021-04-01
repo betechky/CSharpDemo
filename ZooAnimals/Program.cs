@@ -21,7 +21,7 @@ namespace ZooAnimals
 
         public string GetDescription()
         {
-            return "Cage {0}" + " contains a  " + Age + "-year-old " + Species + " that runs " + _speedKmh + " km/h ";
+            return  Age + "-year-old " + Species + " that runs " + _speedKmh + " km/h ";
         }
 
         public void RequestUniqueCharacteristic()
@@ -32,24 +32,26 @@ namespace ZooAnimals
     }
     public class Bear : IAnimal
     {
-        string _grizzlyBear;
-        
+       
+        public bool IsGrizzly;
+
         public int Age { get; set; }
 
         public string Species { get => "Bear"; }
 
         public string GetDescription()
         {
-            if (_grizzlyBear == "yes")
-                return "Cage" + " contains a  " + Age + "-year-old " + Species + " grizzly Bear ";
-            else
-                return "Cage" + " contains a  " + Age + "-year-old " + Species + " non-grizzly Bear ";
+       
+            return Age + "-year-old " +
+                (IsGrizzly ? "" : "non-") + "grizzly " + Species;
         }
 
         public void RequestUniqueCharacteristic()
         {
             Console.Write("Is it a grizzly bear (Yes/No)? ");
-            _grizzlyBear = Console.ReadLine();
+            //IsGrizzly = Console.ReadLine();
+            IsGrizzly = Console.ReadLine().ToLower() == "yes";
+        
         }
     }
     public class Lion : IAnimal
@@ -60,7 +62,7 @@ namespace ZooAnimals
 
         public string GetDescription()
         {
-            return "Cage"  +  " contains a  " + Age +"-year old "+ Species + " with a "  +_maneColour + " mane " ;
+            return  Age +"-year old "+ Species + " with a "  +_maneColour + " mane " ;
         }
 
         public void RequestUniqueCharacteristic()
@@ -73,50 +75,49 @@ namespace ZooAnimals
     {
         static void Main(string[] args)
         {
-            string Animal;
-            IAnimal l = new Lion();
-            IAnimal b = new Bear();
-            IAnimal w = new Wolf();
+            int totalAnimal = 3;
+            List<IAnimal> animals = new List<IAnimal>();
+           
             
-            for (int i = 1; i < 4; i++)
+            for (int i = 0; i < totalAnimal; i++)
             {
-                Console.WriteLine("Cage " + i);
+
+                Console.WriteLine("\nCage " + (i+1));
                 Console.Write("What is the name of the species? ");
-                Animal = Console.ReadLine();
-                Console.Write("How old is it? ");
+                string Animal = Console.ReadLine().ToLower();
+             
+                IAnimal newAnimal = null;
+             
                 switch (Animal)
                 {
                     case "lion":
-                        l.Age = Convert.ToInt32(Console.ReadLine());
-                        l.RequestUniqueCharacteristic();
-                      //  Console.WriteLine(l.GetDescription());
+                        newAnimal = new Lion();
                         break;
                     case "bear":
-                        b.Age = Convert.ToInt32(Console.ReadLine());
-                        b.RequestUniqueCharacteristic();
-                      // Console.WriteLine(b.GetDescription());
+                        newAnimal = new Bear();
                         break;
+                      
                     case "wolf":
-                        w.Age = Convert.ToInt32(Console.ReadLine());
-                        w.RequestUniqueCharacteristic();
-                      // Console.WriteLine(w.GetDescription());
+                        newAnimal = new Wolf();
+                        break;
+                    default:
+                        Console.WriteLine("Please Enter Lion, Bear or Wolf");
                         break;
                 }
-         
+                Console.Write("How old is it? ");
+                newAnimal.Age = Convert.ToInt32(Console.ReadLine());
+                newAnimal.RequestUniqueCharacteristic();
+                animals.Add(newAnimal);
+
             }
            
 
-            List<IAnimal> animals = new List<IAnimal>();
-            {
-                animals.Add(l);
-                animals.Add(b);
-                animals.Add(w);
-            };
 
             Console.WriteLine("\n-----------------------\n");
             foreach (var animal in animals)
             {
-               
+                int ind = animals.IndexOf(animal);
+                Console.Write($"Cage {ind + 1} contains a ");
                 Console.WriteLine(animal.GetDescription());
             }
 
